@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complain Box</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- NAVBAR SECTION -->
+    <nav>
+        <div class="menu">
+            <span><i class='bx bx-menu' id="menu-btn"></i></span>
+        </div>
+        <div class="user-info">
+            <div class="user">
+                <p>Hey, Deniel</p>
+                <span class="text-muted">Admin</span>
+            </div>
+            <div class="profile-img">
+                <img src="images/profile.jpg" alt="profile-img">
+            </div>
+            <!-- <div class="theme-toggler">
+                <span><i class="fas fa-moon">monn</i></span>
+                <span class="active"><i class="fas fa-sun">son</i></span>
+            </div> -->
+        </div>
+    </nav>
+
+    <aside>
+        <div class="sidebar">
+            <div class="first">
+                <div class="logo">
+                    <img src="images/logo.png" alt="sidebar-logo">
+                </div>
+                <div class="close-btn">
+                    <span><i class='bx bx-x' id="close-btn"></i></span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html">
+                    <i class='bx bxs-grid-alt'></i>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="complaints.html">
+                    <i class='bx bxs-message-dots'></i>
+                    <h3>Complaints</h3>
+                </a>
+                <a href="students.html">
+                    <i class='bx bxs-user'></i>
+                    <h3>Students</h3>
+                </a>
+                <a href="faculty.html">
+                    <i class='bx bxs-user-rectangle'></i>
+                    <h3>Faculty</h3>
+                </a>
+                <a href="staff.html">
+                    <i class='bx bxs-group'></i>
+                    <h3>Staff</h3>
+                </a>
+                <a href="admin-profile.html">
+                    <i class='bx bxs-user-circle'></i>
+                    <h3>Profile</h3>
+                </a>
+                <a href="/">
+                    <i class='bx bxs-log-in-circle'></i>
+                    <h3>Log out</h3>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <div class="compalaint-table">
+        <h2>Complaints</h2>
+
+        <div class="filter">
+
+            <div class="short-listing">
+                <div class="short-list">
+                    <p class="text-muted">Show</p>
+                    <select class="">
+                        <option>All</option>
+                        <option>Students</option>
+                        <option>Faculty</option>
+                        <option>Staff</option>
+                    </select>
+                </div>
+                <div class="short-list">
+                    <p class="text-muted">Sort By</p>
+                    <select class="">
+                        <option>Date</option>
+                        <option>ID</option>
+                    </select>
+                </div>
+                <div class="short-list">
+                    <p class="text-muted">Search</p>
+                    <input type="text" name="" placeholder="Search">
+                </div>
+    
+            </div>
+            <div class="pagination">
+                 <p class="text-muted">Viewing 1-10 of 30</p>
+                 <div class="arrow">
+                    <a href="#" class="text-muted"><i class='bx bxs-left-arrow' ></i></a>
+                    <a href="#" class="text-muted"><i class='bx bxs-right-arrow' ></i></a>
+                 </div>               
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Complaint ID</th>
+                    <th>Complainant Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>22/04/2022</td>
+                    <td>1001</td>
+                    <td class="success">Student</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+                <tr>
+                    <td>22/04/2022</td>
+                    <td>1002</td>
+                    <td class="success">Faculty</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+                <tr>
+                    <td>21/04/2022</td>
+                    <td>1003</td>
+                    <td class="success">Staff</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+                <tr>
+                    <td>10/04/2022</td>
+                    <td>1004</td>
+                    <td class="success">Student</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+                <tr>
+                    <td>10/04/2022</td>
+                    <td>1005</td>
+                    <td class="success">Student</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+                <tr>
+                    <td>10/04/2022</td>
+                    <td>1006</td>
+                    <td class="success">Student</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+                <tr>
+                    <td>10/04/2022</td>
+                    <td>1007</td>
+                    <td class="success">Student</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+                <tr>
+                    <td>10/04/2022</td>
+                    <td>1008</td>
+                    <td class="success">Student</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+                <tr>
+                    <td>10/04/2022</td>
+                    <td>1009</td>
+                    <td class="success">Student</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+                <tr>
+                    <td>10/04/2022</td>
+                    <td>1010</td>
+                    <td class="success">Student</td>
+                    <td><a href="complaint-details.html" class="primary">Details</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-------------- JS LINK -------------->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

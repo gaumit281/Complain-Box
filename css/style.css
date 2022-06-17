@@ -1,0 +1,1079 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Bree+Serif&family=Dosis:wght@200&family=Lato:ital,wght@1,300&family=Lora:ital,wght@1,500&family=Piazzolla:opsz@8..30&family=Poppins:ital,wght@0,300;0,400;1,300&family=Roboto+Mono:ital,wght@0,100;1,100&family=Rubik:wght@300&display=swap');
+
+
+/* Root variables */
+
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-varient: #111e88;
+    --color-dark-varient: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* DARK THEME VARIABLES */
+
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202529;
+    --color-dark: #edeffd;
+    --color-dark-varient: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--color-background);
+}
+
+html {
+    font-size: 14px;
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+.text-muted {
+    color: var(--color-info-dark);
+}
+
+h1 {
+    font-family: 'Bree Serif', serif;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif !important;
+}
+
+h3 {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+p {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+
+/*
+
+****************************************************************************
+
+                         ADMIN SECTION
+
+****************************************************************************
+
+*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    padding: 1rem;
+    background: var(--color-white);
+    color: var(--color-dark);
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    position: absolute;
+    z-index: 1;
+    position: fixed;
+}
+
+nav .menu span {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav .user-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+nav .user-info .login {
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    color: var(--color-dark);
+    border: 2px solid var(--color-danger);
+    border-radius: var(--border-radius-1);
+}
+
+nav .user-info .login:hover {
+    color: var(--color-white);
+    background: var(--color-danger);
+    transition: all 0.5s ease;
+}
+
+nav .user-info .register {
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    color: var(--color-white);
+    background: var(--color-danger);
+    border-radius: var(--border-radius-1);
+    transition: all 0.5s ease;
+}
+
+nav .user-info .register:hover {
+    color: var(--color-dark);
+    background: var(--color-white);
+    border: 2px solid var(--color-danger);
+}
+
+nav .user-info .profile-img img {
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
+    border-radius: var(--border-radius-1);
+}
+
+aside {
+    height: 100vh;
+    width: auto;
+    background: var(--color-white);
+    position: relative;
+    z-index: 2;
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    position: fixed;
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+aside .sidebar .first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+aside .sidebar .first img{
+    width: 3rem;
+    height: 2rem;
+}
+
+aside .sidebar .first #close-btn {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+aside .sidebar .nav-links a {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    color: var(--color-dark);
+    font-size: 0.87rem;
+    font-weight: 100;
+}
+
+aside .sidebar .nav-links a:hover {
+    background: var(--color-info-light);
+    color: var(--color-primary);
+    transition: all 0.5s ease;
+    border-radius: var(--border-radius-1);
+}
+
+aside .sidebar .nav-links a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+/* ------------------- MAIN SECTION STYLE -------------------------*/
+
+.main .cards {
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    height: 30vh;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    cursor: pointer;
+    justify-content: center;
+    padding: 0 10rem;
+}
+
+.main .card {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.main .card:hover {
+    box-shadow: none;
+}
+
+.main .card span{
+    background: var(--color-primary);
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: 2rem;
+}
+
+.main .card span i{
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.main .card .faculty {
+    background: var(--color-success);
+}
+
+.main .card .staff {
+    background: var(--color-danger);
+}
+
+.main .card .solved {
+    background: var(--color-success);
+}
+
+.main .card .pending {
+    background: var(--color-danger);
+}
+
+.main .card h3 {
+    margin: 1rem 0 0.6rem;
+    font-size: 1.5rem;
+}
+
+.main .card a {
+    margin-top: 2rem;
+    display: block;
+}
+
+
+/*-------------------TOTAL COMPLAINTS SECTION -----------------------*/
+
+.compalaint-table {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    padding: 0 20rem;
+}
+
+.compalaint-table h2 {
+    margin-bottom: 1rem;
+}
+
+.compalaint-table table {
+    background: var(--color-white);
+    width: 100%;
+    height: auto;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.compalaint-table table:hover {
+    box-shadow: none;
+}
+
+table tbody td {
+    height: 2.8rem;
+    border-radius: 1px solid var(--color-light);
+    color: var(--color-dark-varient);
+}
+
+.compalaint-table .filter {
+    margin-bottom: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.compalaint-table .filter .short-listing {
+    display: flex;
+    gap: 1rem;
+}
+
+.compalaint-table .filter .short-listing .short-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.compalaint-table .filter .short-list select {
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius-1);
+    height: 2rem;
+    width: 6rem;
+    background: var(--color-white);
+    color: var(--color-dark);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.compalaint-table .filter .short-list input {
+    outline: none;
+    border: none;
+    height: 2rem;
+    border-radius: var(--border-radius-1);
+    padding: 0.5rem;
+    color: var(--color-dark);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.compalaint-table .filter .pagination {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.compalaint-table .filter .pagination a {
+    background: var(--color-white);
+    border-radius: var(--border-radius-1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/*------------------- COMPLAINT DETAILS SECTION -----------------------*/
+
+.complaint-details {
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    padding: 1.5rem 3rem;
+}
+
+.complaint-details .all-com-details {
+    width: 100%;
+    height: auto;
+    padding: var(--card-padding);
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.complaint-details:hover {
+    box-shadow: none;
+}
+
+.complaint-details .all-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+}
+
+.complaint-details .all-details h3 {
+    color: var(--color-dark);
+}
+
+.complaint-details .right-details .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 10rem;
+    gap: 1rem;
+}
+
+.complaint-details .right-details .images img {
+    height: 5rem;
+    width: 5rem;
+    margin: 0;
+}
+
+.complaint-details .right-details .images img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.complaint-details .right-details .take-action {
+    padding: 0.5rem 2rem;
+    border-radius: var(--border-radius-1);
+    background: var(--color-primary-varient);
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.complaint-details .right-details .take-action:hover {
+    background: #0f1b56;
+}
+
+.complaint-details .right-details .delete-com {
+    padding: 0.5rem 2rem;
+    border-radius: var(--border-radius-1);
+    background: var(--color-danger);
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.complaint-details .right-details .delete-com:hover {
+    background: #f4404f;
+}
+
+
+/*---------------- ADMIN PROFILE SECTION -------------------------*/
+
+.admin-profile {
+    position: absolute;
+    top: 6rem;
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.admin-profile .admin-profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-2);
+    padding: 5rem;
+    font-weight: bold;
+}
+
+.admin-profile .admin-profile-details .profile-detail {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-profile .admin-profile-details .profile-detail img {
+    height: 4rem;
+    width: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.admin-profile .admin-profile-details .profile-detail a {
+    background: var(--color-primary-varient);
+    padding: 0.5rem 1rem;
+    color: var(--color-white);
+    border-radius: var(--border-radius-1);
+}
+
+.admin-profile .admin-profile-details .profile-detail a:hover {
+    background: #0f1b56;
+}
+
+
+/*
+
+****************************************************************************
+
+                         USER SECTION
+
+****************************************************************************
+
+*/
+
+
+/*----------------  USER INDEX SECTION -------------------------*/
+
+.hero-section {
+    position: absolute;
+    top: 1rem;
+    width: 100%;
+    padding: 10rem;
+}
+
+.hero-section .hero-section-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .hero-section-info .left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.hero-section .hero-section-info .left-side h1 {
+    color: var(--color-dark);
+    font-size: 3rem;
+}
+
+.hero-section .hero-section-info .left-side h1 span {
+    color: var(--color-danger);
+}
+
+.hero-section .hero-section-info .left-side p {
+    width: 80%;
+    font-weight: bold;
+}
+
+.hero-section .hero-section-info .left-side a {
+    padding: 0.5rem 1rem;
+    background: var(--color-danger);
+    color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    font-weight: bold;
+}
+
+.hero-section .hero-section-info .left-side a:hover {
+    background: var(--color-white);
+    color: var(--color-dark);
+    border: 2px solid var(--color-danger);
+    transition: all 0.5s ease;
+}
+
+.hero-section .hero-section-info .right-side img {
+    cursor: pointer;
+}
+
+/*---------------- ADD USER COMPLAINT -------------------------*/
+
+.add-complaint {
+    position: absolute;
+    top: 6rem;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    padding: 0 20rem;
+}
+
+.add-complaint h1 {
+    margin-bottom: 1.4rem;
+}
+
+.add-complaint .container {
+    padding-bottom: 2rem;
+}
+
+.add-complaint form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--box-shadow);
+    background: var(--color-white);
+    border-radius: var(--border-radius-2);
+    padding: 5rem;
+}
+
+.add-complaint form .form-data {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.add-complaint form .form-data label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.add-complaint form input,
+select {
+    border: none;
+    background: var(--color-background);
+    border-radius: var(--border-radius-1);
+    width: 100%;
+    height: 3rem;
+    padding: 0 1rem;
+    font-weight: bold;
+}
+
+.add-complaint form input[type=file] {
+    padding: 1rem;
+}
+
+.add-complaint form textarea {
+    border: none;
+    background: var(--color-background);
+    border-radius: var(--border-radius-1);
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.add-complaint form input::placeholder {
+    font-weight: 100;
+}
+
+.add-complaint form .btn {
+    background: var(--color-primary-varient);
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+.add-complaint form .btn:hover {
+    background: #0f1b56;
+}
+
+.add-complaint form .btn:focus {
+    background: var(--color-primary-varient);
+}
+
+
+/*---------------- SHOW USER COMPLAINT -------------------------*/
+
+.show-user-complaint {
+    position: absolute;
+    top: 6rem;
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+    padding: 0 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.show-user-complaint .complaint {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background: var(--color-white);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow);
+    padding: 5rem;
+    margin-bottom: 2rem;
+}
+
+.show-user-complaint .complaint h3 {
+    font-size: 1.3rem;
+}
+
+.show-user-complaint .complaint p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.show-user-complaint .complaint:hover {
+    box-shadow: none;
+}
+
+.show-user-complaint .complaint .user-complaint-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.show-user-complaint .complaint .user-complaint-details .image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 15rem;
+    gap: 1rem;
+}
+
+.show-user-complaint .complaint .user-complaint-details .image img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.show-user-complaint .complaint button:first-child {
+    padding: 0.5rem 1rem;
+    background: var(--color-success);
+    border: none;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+}
+
+.show-user-complaint .complaint button:first-child:hover {
+    background-color: #0eb87f;
+}
+
+.show-user-complaint .complaint button:last-child {
+    padding: 0.5rem 1rem;
+    background: var(--color-danger);
+    border: none;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+}
+
+.show-user-complaint .complaint button:last-child:hover {
+    background-color: #f4404f;
+}
+
+.show-user-complaint .complaint button a {
+    color: var(--color-white);
+}
+
+/*
+
+**********************************************************************************
+
+                            FOOTER SECTION
+
+**********************************************************************************
+
+*/
+
+/* footer{
+    position: absolute;
+    bottom: 0;
+    background: var(--color-white);
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p{
+    line-height: 5rem;
+} */
+
+
+/*
+
+**********************************************************************************
+
+                            MEDIA QUERY SECTION
+
+**********************************************************************************
+
+*/
+
+
+/*---------------- MEDIA QUERY -------------------------*/
+
+@media screen and (max-width: 1200px) {
+
+    aside {
+        height: 100vh;
+        width: auto;
+    }
+
+    .main .cards {
+        position: absolute;
+        top: 5rem;
+        width: 100%;
+        height: 30vh;
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.6rem;
+        cursor: pointer;
+        justify-content: center;
+        padding: 0 10rem;
+    }
+
+    /*---------------- TOTAL COMPLAINTS ----------------*/
+    .compalaint-table {
+        width: 100%;
+        padding: 0 10rem;
+        margin-top: 1rem;
+    }
+
+    .compalaint-table h2 {
+        margin-bottom: 2rem;
+    }
+
+    .compalaint-table .filter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .compalaint-table .filter .short-listing {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /*---------------- COMPLAINTS DETAILSs----------------*/
+
+    .complaint-details .all-com-details .right-details .take-action {
+        padding: 0.5rem 2rem;
+        font-size: 0.7rem;
+    }
+
+    /*---------------- USER ADD COMPLAINTS----------------*/
+
+    .add-complaint {
+        padding: 0 10rem;
+    }
+
+    /*---------------- SHOW USER COMPLAINT -------------------------*/
+
+    .show-user-complaint {
+        margin-top: 3rem;
+        padding: 0 5rem;
+    }
+
+    .show-user-complaint .complaint {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /*----------------  USER INDEX SECTION -------------------------*/
+
+    .hero-section {
+        position: absolute;
+        top: 0rem;
+        width: 100%;
+        padding: 10rem;
+    }
+
+    .hero-section .hero-section-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-section .hero-section-info .left-side p {
+        width: 100%;
+    }
+
+    .hero-section .hero-section-info .right-side img {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    aside {
+        height: 100vh;
+        width: auto;
+    }
+
+    .main .cards {
+        position: absolute;
+        top: 5rem;
+        width: 100%;
+        height: 30vh;
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.6rem;
+        cursor: pointer;
+        justify-content: center;
+        padding: 0 2rem;
+    }
+
+    /*---------------- TOTAL COMPLAINTS ----------------*/
+    .compalaint-table {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .compalaint-table h2 {
+        margin-bottom: 2rem;
+    }
+
+
+    /*---------------- COMPLAINTS DETAILSs----------------*/
+
+    .complaint-details .all-com-details {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .complaint-details .all-com-details .right-details .take-action {
+        padding: 0.5rem 1rem;
+        font-size: 0.6rem;
+    }
+
+    /*---------------- USER ADD COMPLAINTS----------------*/
+
+    .add-complaint {
+        padding: 0 5rem;
+    }
+
+    /*---------------- SHOW USER COMPLAINT -------------------------*/
+
+    .show-user-complaint {
+        margin-top: 3rem;
+        padding: 0 5rem;
+    }
+
+    .show-user-complaint .complaint {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /*----------------  USER INDEX SECTION -------------------------*/
+
+    .hero-section {
+        position: absolute;
+        top: 1rem;
+        width: 100%;
+        padding: 10rem;
+    }
+
+    .hero-section .hero-section-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-section .hero-section-info .left-side p {
+        width: 100%;
+    }
+
+    .hero-section .hero-section-info .right-side img {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    nav .user-info .login {
+        padding: 0.5rem 0.8rem;
+    }
+
+    nav .user-info .register {
+        padding: 0.5rem 0.8rem;
+    }
+
+    aside {
+        height: 100vh;
+        width: auto;
+    }
+
+    .main .cards {
+        position: absolute;
+        top: 5rem;
+        width: 100%;
+        height: 30vh;
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.6rem;
+        cursor: pointer;
+        justify-content: center;
+        padding: 0 2rem;
+    }
+
+    /*---------------- TOTAL COMPLAINTS ----------------*/
+    .compalaint-table {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .compalaint-table h2 {
+        margin-bottom: 2rem;
+    }
+
+    /*---------------- COMPLAINTS DETAILSs----------------*/
+
+    .complaint-details {
+        padding: 0rem 1rem;
+    }
+
+    .complaint-details .all-com-details {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .complaint-details .all-details {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 2rem;
+        gap: 1rem;
+    }
+
+    /*---------------- USER ADD COMPLAINTS----------------*/
+
+    .add-complaint {
+        padding: 0 1rem;
+    }
+
+    .add-complaint form {
+        padding: 2rem;
+    }
+
+    /*---------------- SHOW USER COMPLAINT -------------------------*/
+
+    .show-user-complaint {
+        margin-top: 3rem;
+        padding: 0 1rem;
+    }
+
+    .show-user-complaint .complaint {
+        padding: 2rem;
+    }
+
+    /*----------------  USER INDEX SECTION -------------------------*/
+
+    .hero-section {
+        position: absolute;
+        top: 6rem;
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .hero-section .hero-section-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-section .hero-section-info .left-side p {
+        width: 100%;
+    }
+
+    .hero-section .hero-section-info .left-side h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .hero-section-info .right-side img {
+        width: 100%;
+    }
+}
