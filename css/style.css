@@ -48,6 +48,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-white) 
+    url('../images/preloader.gif')
+	 no-repeat center center;
+    z-index: 99999;
+}
+
 body {
     background: var(--color-background);
 }

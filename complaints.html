@@ -10,7 +10,8 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
+<body onload="loadingFunction()">
+    <div id="loading"></div>
     <!-- NAVBAR SECTION -->
     <nav>
         <div class="menu">
@@ -98,7 +99,7 @@
                 </div>
                 <div class="short-list">
                     <p class="text-muted">Search</p>
-                    <input type="text" name="" placeholder="Search">
+                    <input type="text" name="" id="myInput" placeholder="Search">
                 </div>
 
             </div>
@@ -111,7 +112,7 @@
             </div>
         </div>
 
-        <table>
+        <table id="myTable">
             <thead>
                 <tr>
                     <th>Date</th>
@@ -187,6 +188,7 @@
 
     <!-------------- JS LINK -------------->
     <script src="js/script.js"></script>
+
 </body>
 
 </html>
